@@ -42,12 +42,3 @@ fields:
     time_format: 
     display_utc: false
   default: now
-- name: post
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Post
