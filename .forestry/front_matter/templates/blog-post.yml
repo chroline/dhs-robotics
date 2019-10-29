@@ -1,4 +1,53 @@
 ---
 label: Blog post
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: author
+  type: datetime
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Author
+  description: Who is writing this post?
+- name: team
+  type: select
+  default: []
+  config:
+    required: true
+    options:
+    - Team 10415
+    - Team 15118
+    - Team 10360
+    - Mentors
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Team
+- name: publish_date
+  type: datetime
+  label: Publish Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: post
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Post
